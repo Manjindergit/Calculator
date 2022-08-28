@@ -2,6 +2,9 @@ let operate = false;
 let operand = '';
 const inputDisplay = document.querySelector('.input');
 const resultDisplay = document.querySelector('.resultOutput');
+const numpad=document.querySelectorAll('.numpad')
+//inputDisplay.textContent='';
+//resultDisplay.textContent='';
 
 function add(a, b) {
     return a + b;
@@ -42,18 +45,25 @@ function calculate() {
         default:
         // code block
     }
+    
+    for(x in numpad){
+        numpad[x].disabled=true;
+    }
 }
 
 function input(number) {
     if (operate === false) {
-        resultDisplay.textContent = number;
+        resultDisplay.textContent += number;
     }
     
-    inputDisplay.textContent = number;
+    inputDisplay.textContent += number;
 }
 
 function operator(operandSign) {
     operate = true;
     operand=operandSign;
+    for(x in numpad){
+        numpad[x].disabled=false;
+    }
 }
 
