@@ -28,13 +28,16 @@ function calculate() {
             
             break;
         case '-':
-            // code block
+            resultDisplay.textContent=subtract(parseInt(resultDisplay.textContent),parseInt(inputDisplay.textContent))
+            inputDisplay.textContent=0;            
             break;
         case '*':
-            // code block
+            resultDisplay.textContent=multiply(parseInt(resultDisplay.textContent),parseInt(inputDisplay.textContent))
+            inputDisplay.textContent=0;
             break;
         case '/':
-            // code block
+            resultDisplay.textContent=division(parseInt(resultDisplay.textContent),parseInt(inputDisplay.textContent))
+            inputDisplay.textContent=0;
             break;
         default:
         // code block
