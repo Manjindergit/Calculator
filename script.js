@@ -1,10 +1,11 @@
 let operate = false;
 let operand = '';
+let result=0;
 const inputDisplay = document.querySelector('.input');
 const resultDisplay = document.querySelector('.resultOutput');
 const numpad=document.querySelectorAll('.numpad')
-//inputDisplay.textContent='';
-//resultDisplay.textContent='';
+//
+resultDisplay.textContent='';
 
 function add(a, b) {
     return a + b;
@@ -46,24 +47,24 @@ function calculate() {
         // code block
     }
     
-    for(x in numpad){
-        numpad[x].disabled=true;
-    }
+   
 }
 
 function input(number) {
     if (operate === false) {
         resultDisplay.textContent += number;
     }
-    
+    else{
     inputDisplay.textContent += number;
+    }
 }
 
 function operator(operandSign) {
+    if(operate===true){
+        calculate();
+    }
     operate = true;
     operand=operandSign;
-    for(x in numpad){
-        numpad[x].disabled=false;
-    }
+    
 }
 
