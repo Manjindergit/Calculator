@@ -11,28 +11,30 @@
 <body>
     <div class="container">
         <div class="display">
-
+            <div class="resultOutput">0000000</div>
+            <div class="input">0</div>
         </div>
 
         <div class="operations">
-            <button class="add">+</button>
-            <button class="subtract">/</button>
-            <button class="multiply">*</button>
-            <button class="divison">/</button>
-            <button class="calculate">=</button>
+            <button type='button' value='clear' class="clear">Clear</button>
+            <button type='button' onclick =operator(this.value) value='+' class="add">+</button>
+            <button type='button' onclick =calculate(this.value) value='-' class="subtract">/</button>
+            <button type='button' onclick =calculate(this.value) value='*' class="multiply">*</button>
+            <button type='button' onclick =calculate(this.value) value='/' class="divison">/</button>
+            <button type='button' onclick =calculate() value='=' class="calculate">=</button>
         </div>
 
         <div class="numbers">
-            <button class="0">0</button>
-            <button class="1">1</button>
-            <button class="2">2</button>
-            <button class="3">3</button>
-            <button class="4">4</button>
-            <button class="5">5</button>
-            <button class="6">6</button>
-            <button class="7">7</button>
-            <button class="8">8</button>
-            <button class="9">9</button>
+            <button type="button" onclick =input(0) class="0">0</button>
+            <button type="button" onclick =input(1) class="1">1</button>
+            <button type="button" onclick =input(2) class="2">2</button>
+            <button type="button" onclick =input(3) class="3">3</button>
+            <button type="button" onclick =input(4) class="4">4</button>
+            <button type="button" onclick =input(5) class="5">5</button>
+            <button type="button" onclick =input(6) class="6">6</button>
+            <button type="button" onclick =input(7) class="7">7</button>
+            <button type="button" onclick =input(8) class="8">8</button>
+            <button type="button" onclick =input(9) class="9">9</button>
         </div>
     </div>
 </body>
